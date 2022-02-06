@@ -5,7 +5,7 @@ class Solution {
         
         int[] res = new int[length];
         
-        // create impact with each update query
+        // create impact with each update query O(q)
         for(int i = 0; i < updates.length; i++){
             int starti = updates[i][0];
             int endi = updates[i][1];
@@ -17,7 +17,7 @@ class Solution {
             }
         }
         
-        // calculate prefix sum
+        // calculate prefix sum O(n)
         int sum = 0;
         for(int i = 0; i < length; i++){
             sum += res[i];
